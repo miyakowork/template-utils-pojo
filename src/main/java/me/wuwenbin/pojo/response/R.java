@@ -28,7 +28,7 @@ public class R extends ConcurrentHashMap<String, Object> {
 
     public static R ok(String msg) {
         R r = new R();
-        r.put("message", msg);
+        r.put("message", msg == null || "".equals(msg) ? "success!" : msg);
         return r;
     }
 
