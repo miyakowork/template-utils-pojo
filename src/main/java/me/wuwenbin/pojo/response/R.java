@@ -32,6 +32,10 @@ public class R extends ConcurrentHashMap<String, Object> {
         return r;
     }
 
+    public static R ok(Object data) {
+        return ok(null, data);
+    }
+
     public static R ok(String msg, Object data) {
         R r = ok(msg).put("data", data);
         return r;
