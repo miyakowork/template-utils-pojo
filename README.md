@@ -1,3 +1,6 @@
+文档：[GitBook](https://miyakowork.gitbooks.io/template-utils-pojo/content/)
+------------
+
 更新日志
 # 1.2.5.RELEASE
 - 改善Page类，剔除某些多余的属性
