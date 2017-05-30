@@ -23,11 +23,6 @@ public class Page<T> extends PageOrder implements Serializable {
     protected int pageSize = 30;
 
     /**
-     * 自动计算页面大小，默认true
-     */
-    protected boolean autoCount = true;
-
-    /**
      * 当前页的数据集合List
      */
     private List<T> result = null;
@@ -47,14 +42,12 @@ public class Page<T> extends PageOrder implements Serializable {
         this.pageSize = pageSize;
     }
 
-    public Page(int pageSize, boolean autoCount) {
-        this.pageSize = pageSize;
-        this.autoCount = autoCount;
+    public Page(List<T> data) {
+        this.result = data;
     }
 
-    public Page(int pageSize, boolean autoCount, String orderDirection, String orderField) {
+    public Page(int pageSize, String orderDirection, String orderField) {
         this.pageSize = pageSize;
-        this.autoCount = autoCount;
         this.orderDirection = orderDirection;
         this.orderField = orderField;
     }
@@ -122,20 +115,6 @@ public class Page<T> extends PageOrder implements Serializable {
      */
     public boolean isFirstSetted() {
         return (getPageNo() > 0 && getPageSize() > 0);
-    }
-
-    /**
-     * @return whether page is count automatically
-     */
-    public boolean isAutoCount() {
-        return autoCount;
-    }
-
-    /**
-     * @param #autoCount
-     */
-    public void setAutoCount(boolean autoCount) {
-        this.autoCount = autoCount;
     }
 
     /**
