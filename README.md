@@ -2,6 +2,8 @@
 [GitBook](https://miyakowork.gitbooks.io/template-utils-pojo/content/)
 ===
 # 更新日志
+## 1.3.0.RELEASE
+- 增加annotation包。和一个Facade层注解供Spring工程使用
 ## 1.2.5.RELEASE
 - 改善Page类，剔除某些多余的属性
 ## 1.2.4.RELEASE
