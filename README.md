@@ -2,6 +2,8 @@
 [GitBook](https://miyakowork.gitbooks.io/template-utils-pojo/content/)
 ===
 # 更新日志
+## 1.3.1.RELEASE
+- 增加zTree树对象
 ## 1.3.0.RELEASE
 - 增加annotation包。和一个Facade层注解供Spring工程使用
 ## 1.2.5.RELEASE
