@@ -8,7 +8,10 @@ package me.wuwenbin.pojo.response;
  * @since 1.1.0
  */
 public interface ResultStatus {
+
     int SUCCESS = 200;
+
     int ERROR = 500;
+
     int SLEEP = 250;
 }
