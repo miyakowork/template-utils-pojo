@@ -33,6 +33,8 @@ public class Page<T> extends PageOrder implements Serializable {
      */
     private int totalCount = -1;
 
+    private boolean autoCount = true;
+
 
     //some construct methods
 
@@ -53,6 +55,13 @@ public class Page<T> extends PageOrder implements Serializable {
         this.orderField = orderField;
     }
 
+    public boolean isAutoCount() {
+        return autoCount;
+    }
+
+    public void setAutoCount(boolean autoCount) {
+        this.autoCount = autoCount;
+    }
 
     //some methods for page
 
