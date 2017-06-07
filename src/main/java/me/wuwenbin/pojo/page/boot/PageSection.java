@@ -7,14 +7,14 @@ import java.util.List;
 /**
  * Created by wuwenbin on 2017/6/7.
  */
-public class Page<T> extends Pagination<T> {
+public class PageSection<T> extends Pagination<T> {
 
     private final Sort sort;
 
     private final int count;
     private final List<T> content;
 
-    public Page(int pageNo, int pageSize, int totalCount, List<T> content, Sort sort) {
+    public PageSection(int pageNo, int pageSize, int totalCount, List<T> content, Sort sort) {
         super(pageNo, pageSize);
         this.sort = sort;
         if (totalCount < 0) {
@@ -24,11 +24,11 @@ public class Page<T> extends Pagination<T> {
         this.content = content;
     }
 
-    public Page(int pageNo, int pageSize, int totalCount, List<T> content) {
+    public PageSection(int pageNo, int pageSize, int totalCount, List<T> content) {
         this(pageNo, pageSize, totalCount, content, null);
     }
 
-    public Page(int pageNo, int pageSize, int totalCount, List<T> content, Direction direction, String... properties) {
+    public PageSection(int pageNo, int pageSize, int totalCount, List<T> content, Direction direction, String... properties) {
         this(pageNo, pageSize, totalCount, content, new Sort(direction, properties));
     }
 
