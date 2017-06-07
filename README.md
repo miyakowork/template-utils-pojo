@@ -2,6 +2,9 @@
 [GitBook](https://miyakowork.gitbooks.io/template-utils-pojo/content/)
 ===
 # 更新日志
+## 1.4.0.RELEASE
+- 以前的Page和PageOrder将会注释过期，不推荐使用
+- 全新的分页/排序对象，更清晰、友好详情见page.boot包下
 ## 1.3.1.RELEASE
 - 增加zTree树对象
 ## 1.3.0.RELEASE

@@ -10,6 +10,7 @@ import java.io.Serializable;
  * @author wuwenbin
  * @since 1.0.0
  */
+@Deprecated
 public class PageOrder implements Serializable {
 
     /**
