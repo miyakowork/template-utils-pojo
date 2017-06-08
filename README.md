@@ -2,6 +2,8 @@
 [GitBook](https://miyakowork.gitbooks.io/template-utils-pojo/content/)
 ===
 # 更新日志
+## 1.4.3.RELEASE
+- 修正
 ## 1.4.2.RELEASE
 - 修改新Page类名为PageSection，防止和以前的冲突
 ## 1.4.1.RELEASE

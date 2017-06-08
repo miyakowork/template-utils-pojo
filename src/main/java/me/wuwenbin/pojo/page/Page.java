@@ -10,7 +10,6 @@ import java.util.*;
  * @author wuwenbin
  * @since 1.0.0
  */
-@Deprecated
 public class Page<T> extends PageOrder implements Serializable {
 
     /**

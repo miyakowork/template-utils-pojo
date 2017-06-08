@@ -82,17 +82,13 @@ public class Sort implements Iterable<Sort.Order>, Serializable {
      * @return
      */
     public Sort and(Sort sort) {
-
         if (sort == null) {
             return this;
         }
-
-        ArrayList<Order> these = new ArrayList<Order>(this.orders);
-
+        ArrayList<Order> these = new ArrayList<>(this.orders);
         for (Order order : sort) {
             these.add(order);
         }
-
         return new Sort(these);
     }
 
