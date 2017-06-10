@@ -1,5 +1,7 @@
 package me.wuwenbin.pojo.page.boot;
 
+import me.wuwenbin.pojo.page.boot.support.PageSort;
+
 import java.util.List;
 
 /**
@@ -43,6 +45,12 @@ public interface Pageable<T> {
      */
     int getTotalCount();
 
+    /**
+     * 获取排序对象
+     *
+     * @return
+     */
+    PageSort getPageSort();
 
     /**
      * 获取总页数
@@ -64,13 +72,6 @@ public interface Pageable<T> {
      * @return
      */
     boolean hasContent();
-
-    /**
-     * 返回排序参数对象
-     *
-     * @return
-     */
-    Sort getSort();
 
     /**
      * 返回下一页分页信息对象，如果已经是最后一页，则还是返回最后一页

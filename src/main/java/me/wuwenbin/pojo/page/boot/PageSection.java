@@ -1,42 +1,41 @@
 package me.wuwenbin.pojo.page.boot;
 
-import me.wuwenbin.pojo.page.boot.Sort.Direction;
+import me.wuwenbin.pojo.page.boot.support.PageSort;
 
 import java.util.List;
 
 /**
+ * 分页对象信息接口的一个基本实现
+ * 可自定义实现，继承Pagination抽象类或者实现Pageable接口即可
  * Created by wuwenbin on 2017/6/7.
  */
 public class PageSection<T> extends Pagination<T> {
 
-    private final Sort sort;
+    private static final int FIRST_PAGE = 1;
 
-    private final int count;
+    private final int totalCount;
     private final List<T> content;
 
-    public PageSection(int pageNo, int pageSize, int totalCount, List<T> content, Sort sort) {
+    private final PageSort pageSort;
+
+    public PageSection(int pageNo, int pageSize, int totalCount, List<T> content, PageSort pageSort) {
         super(pageNo, pageSize);
-        this.sort = sort;
         if (totalCount < 0) {
             throw new IllegalArgumentException("数据总量大小不能小于0");
         }
-        this.count = totalCount;
+        this.totalCount = totalCount;
         this.content = content;
+        this.pageSort = pageSort;
     }
 
-    public PageSection(int pageNo, int pageSize, int totalCount, List<T> content) {
-        this(pageNo, pageSize, totalCount, content, null);
+    @Override
+    public PageSort getPageSort() {
+        return pageSort;
     }
-
-    public PageSection(int pageNo, int pageSize, int totalCount, List<T> content, Direction direction, String... properties) {
-        this(pageNo, pageSize, totalCount, content, new Sort(direction, properties));
-    }
-
-
 
     @Override
     public int getTotalCount() {
-        return count;
+        return totalCount;
     }
 
     @Override
@@ -59,11 +58,6 @@ public class PageSection<T> extends Pagination<T> {
     }
 
     @Override
-    public Sort getSort() {
-        return sort;
-    }
-
-    @Override
     public int nextOrLast() {
         return getPageNo() + 1 > last() ? last() : getPageNo() + 1;
     }
@@ -75,7 +69,7 @@ public class PageSection<T> extends Pagination<T> {
 
     @Override
     public int first() {
-        return 1;
+        return FIRST_PAGE;
     }
 
     @Override

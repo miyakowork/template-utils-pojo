@@ -1,5 +1,7 @@
 package me.wuwenbin.pojo.page.boot;
 
+import me.wuwenbin.pojo.page.boot.support.PageSort;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -39,6 +41,8 @@ public abstract class Pagination<T> implements Pageable<T>, Serializable {
         return pageNo * pageSize;
     }
 
+    public abstract PageSort getPageSort();
+
     public abstract int getTotalCount();
 
     public abstract int getTotalPages();
@@ -46,8 +50,6 @@ public abstract class Pagination<T> implements Pageable<T>, Serializable {
     public abstract List<T> getContent();
 
     public abstract boolean hasContent();
-
-    public abstract Sort getSort();
 
     public abstract int nextOrLast();
 

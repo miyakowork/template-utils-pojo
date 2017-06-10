@@ -2,6 +2,8 @@
 [GitBook](https://miyakowork.gitbooks.io/template-utils-pojo/content/)
 ===
 # 更新日志
+## 1.4.4.RELEASE
+- BUG fixed
 ## 1.4.3.RELEASE
 - 修正
 ## 1.4.2.RELEASE
