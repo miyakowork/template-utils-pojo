@@ -88,6 +88,9 @@ public class PageSort implements Iterable<Order>, Serializable {
         return null;
     }
 
+    public List<Order> getOrders() {
+        return orders;
+    }
 
     public static PageSort create(String... properties) {
         return new PageSort(properties);
