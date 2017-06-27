@@ -1,4 +1,4 @@
-package me.wuwenbin.pojo.response;
+package org.templateproject.pojo.response;
 
 import java.io.Serializable;
 import java.util.Map;

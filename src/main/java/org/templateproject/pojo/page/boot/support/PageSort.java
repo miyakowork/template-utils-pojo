@@ -1,4 +1,4 @@
-package me.wuwenbin.pojo.page.boot.support;
+package org.templateproject.pojo.page.boot.support;
 
 
 import java.io.Serializable;

@@ -1,4 +1,4 @@
-package me.wuwenbin.pojo.annotation;
+package org.templateproject.pojo.annotation;
 
 import org.springframework.stereotype.Component;
 

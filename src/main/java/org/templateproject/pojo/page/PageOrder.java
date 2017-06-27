@@ -1,4 +1,4 @@
-package me.wuwenbin.pojo.page;
+package org.templateproject.pojo.page;
 
 import java.io.Serializable;
 

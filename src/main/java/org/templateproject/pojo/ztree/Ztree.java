@@ -1,4 +1,4 @@
-package me.wuwenbin.pojo.ztree;
+package org.templateproject.pojo.ztree;
 
 /**
  * zTree树对象，如果需要额外的自定义属性，可继承此类

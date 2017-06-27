@@ -1,6 +1,6 @@
-package me.wuwenbin.pojo.page.boot;
+package org.templateproject.pojo.page.boot;
 
-import me.wuwenbin.pojo.page.boot.support.PageSort;
+import org.templateproject.pojo.page.boot.support.PageSort;
 
 import java.io.Serializable;
 import java.util.List;

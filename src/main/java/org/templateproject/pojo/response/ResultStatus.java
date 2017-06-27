@@ -1,4 +1,4 @@
-package me.wuwenbin.pojo.response;
+package org.templateproject.pojo.response;
 
 /**
  * 返回对象码

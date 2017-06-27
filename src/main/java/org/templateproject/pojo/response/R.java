@@ -1,4 +1,4 @@
-package me.wuwenbin.pojo.response;
+package org.templateproject.pojo.response;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
